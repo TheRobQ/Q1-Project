@@ -1,0 +1,58 @@
+.main{
+  background-color: lightgreen;
+  grid-area: main;
+}
+
+.header{
+  background-color: lightsalmon;
+  grid-area: header;
+}
+
+.footer{
+  background-color: darkred;
+  grid-area: footer;
+}
+
+.sider{
+  border-right: solid;
+  border-color: darkgray;
+  background-color: lightblue;
+  grid-area: sider;
+  margin-left: 24px;
+}
+
+.grid{
+  height: 100vh;
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: [header]8% [main]auto [footer]5%;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-template-areas:
+  "header header header header header header"
+  "sider sider main main main main"
+  "sider sider footer footer footer footer";
+}
+
+h4{
+  display: inline;
+}
+
+.characterName{
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.modLabel{
+  margin-left: 12px;
+}
+.modifier{
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+hr{
+  margin-top: -4px;
+}
