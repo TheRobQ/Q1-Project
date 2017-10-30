@@ -3,13 +3,13 @@ $(document).ready(function() {
   var actor = [];
   var totals = [];
 
-  $('#addCharacter').click(function(event){
+  $('#addCharacter').click(function(event) {
     $('#buttonRow').before('<tr class="inputRow"><td><label>Character/Foe </label></td>' +
-    '<td><input type="text" value="" class="characterName" required>' + '<label class="modLabel">Modifier</label></td>' +
-    '<td><input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]"></td></tr>')
+      '<td><input type="text" value="" class="characterName" required>' + '<label class="modLabel">Modifier</label></td>' +
+      '<td><input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]"></td></tr>')
   })
 
-  $('#axCharacter').click(function(event){
+  $('#axCharacter').click(function(event) {
     $('.inputRow:last').remove();
   })
 
@@ -34,7 +34,24 @@ $(document).ready(function() {
     }).reverse();
     console.log(totals);
     for (let j = 0; j < totals.length; j++) {
-      $('.list').append("<p>" + totals[j]["name"] + " " + totals[j]["inVal"] + "</p>")}
+      $('.list').append("<p class='ordered'>" + totals[j]["name"] + " " + totals[j]["inVal"] + "<button class='remove'>x</button>" + "</p>")
+      $(".remove").click(function(event) {
+        console.log("clicked");
+        $(this).closest("p").remove(".ordered")
+      })
+      $(".ordered").click(function(event) {
+        console.log('clicked');
+        $("p").removeClass("highlight");
+         $(event.target).closest("p").addClass("highlight");
+      })
+    }
+    $('#clearAll').click(function(event){
+      $('.ordered').remove();
+      initValue = [];
+      actor = [];
+      totals = [];
+      console.log(totals);
+    })
   })
 
 })

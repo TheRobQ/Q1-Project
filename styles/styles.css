@@ -1,5 +1,5 @@
 .main{
-  background-color: lightgreen;
+  background-color: lightgray;
   grid-area: main;
 }
 
@@ -16,9 +16,18 @@
 .sider{
   border-right: solid;
   border-color: darkgray;
+  border-width: .25px;
   background-color: lightblue;
   grid-area: sider;
   margin-left: 24px;
+}
+
+.leftImage{
+  border-left: solid;
+  border-color: darkgray;
+  border-width:  .25px;
+  background-color: lightblue;
+  grid-area: leftImage;
 }
 
 .grid{
@@ -30,7 +39,7 @@
   grid-row-gap: 15px;
   grid-template-areas:
   "header header header header header header"
-  "sider sider main main main main"
+  "sider sider main main main leftImage"
   "sider sider footer footer footer footer";
 }
 
@@ -60,21 +69,18 @@ hr{
 label{
   margin-right: 5px;
 }
-.snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 275px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: black; /* Black background color */
-    color: white; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 40px;
+
+.highlight {
+    background-color: lightgreen;
 }
 
+.remove {
+  display: inline;
+}
+
+.ordered{
+  background-color: none;
+}
 #snackbar1{
   background-color: darkred;
 }
