@@ -1,3 +1,6 @@
+body{
+  padding: 5px;
+}
 .main{
   background-color: lightgray;
   grid-area: main;
@@ -29,15 +32,14 @@
   height:auto;
 }
 .leftImage{
-  border-left: solid;
+  /*border-left: solid;
   border-color: darkgray;
-  border-width:  .25px;
-  background-color: lightblue;
+  border-width:  .25px;*/
   grid-area: leftImage;
 }
 
 .grid{
-  height: 100vh;
+  height: auto;
   display:grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: [header]8% [main]auto [footer]5%;
@@ -45,7 +47,7 @@
   grid-row-gap: 15px;
   grid-template-areas:
   "header header header header header header"
-  "sider sider main main main leftImage"
+  "sider sider main main leftImage leftImage"
   "sider sider footer footer footer footer";
 }
 
