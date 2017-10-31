@@ -19,9 +19,15 @@
   border-width: .25px;
   background-color: lightblue;
   grid-area: sider;
-  margin-left: 24px;
+  padding: 8px;
 }
-
+.imageSlider{
+  max-width:250px;
+  min-width: 125px;
+  grid-row-start: leftImage;
+  grid-row-end: leftImage;
+  height:auto;
+}
 .leftImage{
   border-left: solid;
   border-color: darkgray;
@@ -81,24 +87,21 @@ label{
 .ordered{
   background-color: none;
 }
-#snackbar1{
-  background-color: darkred;
+
+/** {box-sizing:border-box}*/
+
+/* Slideshow container */
+.slideshow-container {
+  width:300px;
+  max-width: 320px;
+  margin: auto;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-.snackbar.show {
-    visibility: visible; /* Show the snackbar */
-    animation: fadein 0.5s, fadeout 1.5s 3.5s;
+.wrapper{
+      display:block;
 }
 
-/* Animations to fade the snackbar in and out */
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 40px; opacity: 1;}
-}
-
-@keyframes fadeout {
-    from {bottom: 40px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+.hide {
+  display: none;
 }

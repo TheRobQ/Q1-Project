@@ -4,8 +4,8 @@ $(document).ready(function() {
   var totals = [];
 
   $('#addCharacter').click(function(event) {
-    $('#buttonRow').before('<tr class="inputRow"><td><label>Character/Foe </label></td>' +
-      '<td><input type="text" value="" class="characterName" required>' + '<label class="modLabel">Modifier</label></td>' +
+    $('#buttonRow').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
+      '<td><input type="text" value="" class="characterName" size="16" required>' + '<label class="modLabel">Modifier</label></td>' +
       '<td><input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]"></td></tr>')
   })
 
@@ -42,10 +42,10 @@ $(document).ready(function() {
       $(".ordered").click(function(event) {
         console.log('clicked');
         $("p").removeClass("highlight");
-         $(event.target).closest("p").addClass("highlight");
+        $(event.target).closest("p").addClass("highlight");
       })
     }
-    $('#clearAll').click(function(event){
+    $('#clearAll').click(function(event) {
       $('.ordered').remove();
       initValue = [];
       actor = [];
@@ -54,4 +54,18 @@ $(document).ready(function() {
     })
   })
 
+  var slideIndex = 0;
+  function showSlides() {
+    $('.mySlides').each(function() {
+      $('.mySlides').addClass('hide');
+      console.log($('.mySlides').length);
+    })
+    slideIndex++;
+    if (slideIndex > $('.mySlides').length-1) {
+      slideIndex = 0;
+    }
+  $('.mySlides').eq(slideIndex).removeClass('hide');
+  console.log(slideIndex);
+  }
+  setInterval(showSlides, 10000);
 })
