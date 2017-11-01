@@ -21,12 +21,14 @@ table {
 
 td {
   padding: 4px;
+  width: auto;
 }
 
 tr {
   border-bottom: solid;
   border-color: lightgray;
   border-width: .25px;
+  width: inherit;
 }
 
 tr: last-of-type {
