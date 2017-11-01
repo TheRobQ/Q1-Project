@@ -16,6 +16,14 @@ label{
   font-family: 'Roboto', sans-serif;
 }
 
+table{
+  margin-bottom: 10px;
+}
+
+button{
+  background-color: snow;
+      /*transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
+}
 .ordered{
   font-family: 'Courgette', cursive;
   text-align: left;
@@ -56,7 +64,6 @@ tr{
 
 tr: last-of-type{
   border-bottom: none;
-  padding-top: 12px;
 }
 
 .sider{
@@ -117,6 +124,7 @@ h4{
 .modLabel{
   margin-left: 12px;
 }
+
 .modifier{
   outline: none;
   /*border: none;*/
@@ -128,12 +136,13 @@ h4{
   border: lightgray;
   background-color: white;
 }
+
 hr{
   margin-top: -4px;
 }
 
 label{
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .highlight {
@@ -164,4 +173,9 @@ label{
 
 .hide {
   display: none;
+}
+
+#roll{
+  font-style: bold;
+  font-size: large;
 }

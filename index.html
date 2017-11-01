@@ -29,7 +29,7 @@
               <label>Player/Foe</label>
             </td>
             <td>
-              <input type="text" value="" class="characterName" name="characterName" size="16" required>
+              <input type="text" value="" class="characterName" name="characterName" size="18" required>
               <label class="modLabel"> Modifier</label>
             </td>
             <td>
@@ -40,7 +40,7 @@
             <td>
               <label>Player/Foe</label></td>
             <td>
-              <input type="text" value="" class="characterName" name="characterName" size="16" required>
+              <input type="text" value="" class="characterName" name="characterName" size="18" required>
               <label class="modLabel"> Modifier</label></td>
             <td>
               <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[1-9]" oninvalid="this.setCustomValidity('Make sure to enter only numbers')" oninput="setCustomValidity('')"> </td>
@@ -50,7 +50,7 @@
             <td>
               <label> Player/Foe</label></td>
             <td>
-              <input type="text" value="" class="characterName" name="characterName" size="16" required>
+              <input type="text" value="" class="characterName" name="characterName" size="18" required>
               <label class="modLabel"> Modifier</label>
             </td>
             <td>
@@ -59,15 +59,31 @@
           </tr>
           <tr id="buttonRow">
             <td>
+              <button id="addCharacter" form="form1">Add participant</button>
+                </td>
+                <td>
+                  <button id="axCharacter" form="form1">Remove participant</button>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;
+          </td>
+            <td>
               <button type="submit" form="form1" value="Submit" id="roll">Roll the Dice</button>
             </td>
+            <td>
+              &nbsp;
+          </td>
           </tr>
         </form>
       </table>
-      <p class="btn btn-primary" id="addCharacter" form="form1">Add a player or foe</p><br />
-      <p class="btn btn-primary" id="axCharacter" form="form1">Remove a player or foe</p><br />
+
+
       <p class="btn btn-primary" id="save" form="form1">Save your party</p>
-      <br />
       <p class="btn btn-primary" id="load" form="form1">Load saved party</p>
       <br />
     </div>
@@ -76,7 +92,8 @@
       <h1>Initiative order</h1>
       <article>
         <h3 class="list"></h3>
-        <p class="lead">"There is no winning or losing, but rather the value is in the experience of imagining yourself as a character in whatever genre you're involved in, whether it's a fantasy game, the Wild West, secret agents or whatever else. You get to sort of vicariously experience those things."</p>
+        <p class="lead">"There is no winning or losing, but rather the value is in the experience of imagining yourself as a character in whatever genre you're involved in, whether it's a fantasy game, the Wild West, secret agents or whatever else. You get to sort of
+          vicariously experience those things."</p>
         <p class="quoteName">
           <em>&mdash; Gary Gygax</em>
         </p>
@@ -85,42 +102,42 @@
     </div>
 
     <div class="leftImage">
-          <div class="mySlides">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743550/"></a>
-          </div>
+      <div class="mySlides">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743550/"></a>
+      </div>
 
-          <div class="mySlides hide">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743551/"></a>
-          </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743551/"></a>
+      </div>
 
-          <div class="mySlides hide">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743790/"></a>
-          </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743790/"></a>
+      </div>
 
-          <div class="mySlides hide">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743760/"></a>
-          </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743760/"></a>
+      </div>
 
-          <div class="mySlides hide">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743703/"></a>
-          </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743703/"></a>
+      </div>
 
-          <div class="mySlides hide">
-          <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743559/"></a>
-        </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743559/"></a>
+      </div>
 
-        <div class="mySlides hide">
-        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362286743559/"></a>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362286743559/"></a>
       </div>
       <div class="mySlides hide">
-      <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362285206599/"></a>
-    </div>
-    <div class="mySlides hide">
-    <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/304626362275983460/"></a>
-    </div>
-    <div class="mySlides hide">
-    <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true"  href="https://www.pinterest.com/pin/534661787006290822/"></a>
-    </div>
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362285206599/"></a>
+      </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/304626362275983460/"></a>
+      </div>
+      <div class="mySlides hide">
+        <a data-pin-do="embedPin" data-pin-width="large" data-pin-terse="true" href="https://www.pinterest.com/pin/534661787006290822/"></a>
+      </div>
 
     </div>
     <!-- Footer -->
