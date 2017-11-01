@@ -58,6 +58,8 @@ $(document).ready(function() {
       initValue = [];
       actor = [];
       totals = [];
+      player = [];
+      modifier = [];
       //console.log(totals);
     })
   })
@@ -86,7 +88,7 @@ $(document).ready(function() {
       myDudes.push(localStorage.getItem("player"+[i]));
       myMods.push(localStorage.getItem("modifier"+[i]));}
     for(let j = 0; j < myDudes.length; j++){
-      $('table').append('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
+      $('.inputRow:first').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
         '<td><input type="text" value="" name="charName" class="characterName1" size="16" required>' + '<label class="modLabel">Modifier</label></td>' +
         '<td><input type="text" class="modifier1" value="" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')}
       $('.characterName1').each(function(i){

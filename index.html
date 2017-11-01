@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Courgette|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <title>title</title>
@@ -14,13 +15,13 @@
 
   <div class="grid">
     <div class="header">
-      <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h3">Fight Night</span>
       </nav>
     </div>
 
     <div class="sider">
-      <h1>Main Content</h1>
+      <h1>Mano a Mano</h1>
       <table>
         <form id="form1">
           <tr class="inputRow">
@@ -55,6 +56,7 @@
             <td>
               <input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" oninvalid="this.setCustomValidity('Make sure to enter ony numbers')" oninput="setCustomValidity('')"></td>
           </tr>
+          </tr>
           <tr id="buttonRow">
             <td>
               <button type="submit" form="form1" value="Submit" id="roll">Roll the Dice</button>
@@ -71,13 +73,15 @@
     </div>
 
     <div class="main">
-      <h1>Main Content</h1>
+      <h1>Initiative order</h1>
       <article>
-        <h3 class="list">Some Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3 class="list"></h3>
+        <p>"There is no winning or losing, but rather the value is in the experience of imagining yourself as a character in whatever genre you're involved in, whether it's a fantasy game, the Wild West, secret agents or whatever else. You get to sort of vicariously experience those things."</p>
+        <p class="quoteName">
+          <em>&mdash; Gary Gygax</em>
+        </p>
       </article>
-      <p class="btn btn-primary" id="clearAll">Clear</p><br />
+      <p class="btn btn-primary" id="clearAll">Clear All</p><br />
     </div>
 
     <div class="leftImage">

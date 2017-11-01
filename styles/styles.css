@@ -1,13 +1,27 @@
 body{
-  padding: 5px;
+  padding: 12px;
+
+}
+
+h1{
+  font-family: 'Courgette', cursive;
+  text-align: center;
+}
+
+p{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+label{
+  font-family: 'Roboto', sans-serif;
 }
 .main{
-  background-color: lightgray;
   grid-area: main;
+  background: url("../paper.jpg");
+  padding:10px;
 }
 
 .header{
-  background-color: lightsalmon;
   grid-area: header;
 }
 
@@ -16,11 +30,24 @@ body{
   grid-area: footer;
 }
 
+td{
+  padding:4px;
+}
+tr{
+  border-bottom: solid;
+  border-color: lightgray;
+  border-width: .25px;
+}
+
+tr: last-of-type{
+  border-bottom: none;
+  padding-top: 12px;
+}
+
 .sider{
   border-right: solid;
   border-color: darkgray;
   border-width: .25px;
-  background-color: lightblue;
   grid-area: sider;
   padding: 8px;
 }
@@ -31,6 +58,7 @@ body{
   grid-row-end: leftImage;
   height:auto;
 }
+
 .leftImage{
   /*border-left: solid;
   border-color: darkgray;
@@ -48,28 +76,43 @@ body{
   grid-template-areas:
   "header header header header header header"
   "sider sider main main leftImage leftImage"
-  "sider sider footer footer footer footer";
+  "footer footer footer footer footer footer";
 }
 
 h4{
   display: inline;
 }
 
+.quoteName{
+  text-align: right;
+}
 .characterName{
   outline: none;
   border: none;
   background-color: white;
 }
 
-.modLabel{
-  margin-left: 12px;
-}
-.modifier{
+.characterName1{
   outline: none;
   border: none;
   background-color: white;
 }
 
+
+.modLabel{
+  margin-left: 12px;
+}
+.modifier{
+  outline: none;
+  /*border: none;*/
+  background-color: white;
+}
+
+.modifier1{
+  outline: none;
+  border: lightgray;
+  background-color: white;
+}
 hr{
   margin-top: -4px;
 }
