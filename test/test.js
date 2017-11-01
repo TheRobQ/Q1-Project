@@ -1,27 +1,25 @@
-casper = require('casper').create();
-casper.start('http://casperjs.org/');
+//casper = require('casper').create();
+//casper.start('http://casperjs.org/');
 
-casper.start('http//:google.com', function(){
-    // this.echo(messageToPrint, style)
-    this.echo(this.getTitle, 'INFO')
-});
+// casper.start('http//:google.com', function(){
+//     // this.echo(messageToPrint, style)
+//     this.echo(this.getTitle, 'INFO')
+// });
+//
+// casper.run();
+// console.log("Hello PhantomJS")
 
-casper.run();
-console.log("Hello PhantomJS")
 
-
-casper.test.begin('Testing my forms',3, function(test) {
-  casper.start('http://amazon.com', function() {
-    this.fill('form#nav-searchbar', {
-      'field-keywords': 'javascript'
-    }, true);
-  });
-
+casper.test.begin('Testing my site',2, function(test) {
+  casper.start('http://initiativeapp.surge.sh/');
   casper.then(function() {
-    test.assertTitle('Amazon.com: javascript', 'Amazon search results page doesnt have expected title');
+       test.assertExists('form#form1')
   });
 
-  casper.run(function() {
-    test.done();
+  casper.then(function(){
+    test.assertTitle('Initative tracker', 'Has correct title')
+  })
+  casper.run(function(){
+    test.done()
   });
-});
+})
