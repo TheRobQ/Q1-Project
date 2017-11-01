@@ -1,0 +1,22 @@
+{
+  "name": "q1project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobQ/Q1-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRobQ/Q1-Project/issues"
+  },
+  "homepage": "https://github.com/TheRobQ/Q1-Project#readme"
+}
