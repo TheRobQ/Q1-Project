@@ -1,6 +1,10 @@
+var actor = [];
+var random = function(){
+  return Math.floor((Math.random() * 20) + 1)
+}
+
 $(document).ready(function() {
   var initValue = [];
-  var actor = [];
   var player = [];
   var modifier = [];
   var totals = [];
@@ -19,8 +23,7 @@ $(document).ready(function() {
   $('#form1').submit(function(event) {
     event.preventDefault();
     $(".modifier").each(function() {
-      initValue.push(parseInt($(this).val()) +
-        Math.floor((Math.random() * 20) + 1))
+      initValue.push(parseInt($(this).val()) + random())
     })
     $(".modifier1").each(function() {
       initValue.push(parseInt($(this).val()) +
@@ -42,7 +45,7 @@ $(document).ready(function() {
       return a.inVal - b.inVal;
     }).reverse();
     for (let j = 0; j < totals.length; j++) {
-      $('.list').append("<p class='ordered'>" + totals[j]["name"] + " " + totals[j]["inVal"] + "<button class='remove'>x</button>" + "</p>")
+      $('.quoteName').append("<p class='ordered'>" + totals[j]["name"] + " " + totals[j]["inVal"] + "<button class='remove'>x</button>" + "</p>")
       $(".remove").click(function(event) {
         $(this).closest("p").remove(".ordered")
       })
@@ -58,8 +61,6 @@ $(document).ready(function() {
       initValue = [];
       actor = [];
       totals = [];
-      player = [];
-      modifier = [];
       //console.log(totals);
     })
   })

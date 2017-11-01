@@ -1,13 +1,13 @@
 {
   "name": "q1project",
   "version": "1.0.0",
-  "description": "",
+  "description": "app",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "tests": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/TheRobQ/Q1-Project#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "chai": "^4.1.2",
+    "jquery": "^3.2.1",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "mocha-jsdom": "^1.1.0"
   }
 }

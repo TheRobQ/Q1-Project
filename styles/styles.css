@@ -15,10 +15,25 @@ p{
 label{
   font-family: 'Roboto', sans-serif;
 }
+
+.ordered{
+  font-family: 'Courgette', cursive;
+  text-align: left;
+}
+
+.display-4{
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  font-size: 28px;
+}
+
+.text-muted{
+  font-family: 'Roboto', sans-serif;
+}
 .main{
   grid-area: main;
   background: url("../paper.jpg");
-  padding:10px;
+  padding:17px;
 }
 
 .header{
@@ -88,13 +103,13 @@ h4{
 }
 .characterName{
   outline: none;
-  border: none;
+  /*border: none;*/
   background-color: white;
 }
 
 .characterName1{
   outline: none;
-  border: none;
+  /*border: none;*/
   background-color: white;
 }
 
