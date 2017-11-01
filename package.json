@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/TheRobQ/Q1-Project/issues"
   },
-  "homepage": "https://github.com/TheRobQ/Q1-Project#readme"
+  "homepage": "https://github.com/TheRobQ/Q1-Project#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
 }
