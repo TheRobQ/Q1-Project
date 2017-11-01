@@ -9,3 +9,4 @@ A basic initiative tracker for D20 games.
 4. Once your ready, Roll the Dice! 
 
 The app will generate a random number between 1-20 and add the player modifier to it.  It will then generate a list in descending order.  You can click any of the players/foe names on the list to highlight it, and the X button will remopve that name from the list. (So a dead goblin isn't cluttering up your business). 
+<img width="1420" alt="screen shot 2017-11-01 at 2 30 38 pm" src="https://user-images.githubusercontent.com/27639305/32296487-ff9bdf8e-bf11-11e7-98f9-f66eda929943.png">
