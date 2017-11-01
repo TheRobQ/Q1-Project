@@ -1,5 +1,5 @@
 var actor = [];
-var random = function(){
+var random = function() {
   return Math.floor((Math.random() * 20) + 1)
 }
 
@@ -67,8 +67,8 @@ $(document).ready(function() {
     })
   })
 
-  $('#save').click(function(event){
-    $(".modifier").each(function(){
+  $('#save').click(function(event) {
+    $(".modifier").each(function() {
       modifier.push($(this).val())
     })
     //console.log(modifier);
@@ -76,48 +76,55 @@ $(document).ready(function() {
       player.push($(this).val())
     })
     //console.log(player);
-    for(let i = 0; i < player.length; i++){
-    localStorage.setItem("player"+[i], player[i]);
-  }
-    for(let j = 0; j < modifier.length; j++){
-      localStorage.setItem("modifier"+[j], modifier[j]);
+    for (let i = 0; i < player.length; i++) {
+      localStorage.setItem("player" + [i], player[i]);
+    }
+    for (let j = 0; j < modifier.length; j++) {
+      localStorage.setItem("modifier" + [j], modifier[j]);
     }
   })
 
-  $('#load').click(function(event){
+  $('#load').click(function(event) {
     var myDudes = [];
     var myMods = [];
-    for(var i = 0; i < localStorage.length/2; i++){
-      myDudes.push(localStorage.getItem("player"+[i]));
-      myMods.push(localStorage.getItem("modifier"+[i]));}
-    for(let j = 0; j < myDudes.length; j++){
+    for (var i = 0; i < localStorage.length / 2; i++) {
+      myDudes.push(localStorage.getItem("player" + [i]));
+      myMods.push(localStorage.getItem("modifier" + [i]));
+    }
+    for (let j = 0; j < myDudes.length; j++) {
       $('.inputRow:first').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
         '<td><input type="text" value="" name="charName" class="characterName1" size="18" required>' + '<label class="modLabel">Modifier</label></td>' +
-        '<td><input type="text" class="modifier1" value="" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')}
-      $('.characterName1').each(function(i){
-        $(this).val(myDudes[i])
-      })
-      $('.modifier1').each(function(i){
-        $(this).val(myMods[i])
-      })
-      // $(".list").after("<p> Your Party includes " + localStorage.getItem("player"+[i]) + "</p>")
+        '<td><input type="text" class="modifier1" value="" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
+    }
+    $('.characterName1').each(function(i) {
+      $(this).val(myDudes[i])
+    })
+    $('.modifier1').each(function(i) {
+      $(this).val(myMods[i])
+    })
+    // $(".list").after("<p> Your Party includes " + localStorage.getItem("player"+[i]) + "</p>")
 
     console.log(myDudes);
     console.log(myMods);
   })
 
+  $('#clear').click(function(event) {
+    localStorage.clear();
+  })
+
   var slideIndex = 0;
+
   function showSlides() {
     $('.mySlides').each(function() {
       $('.mySlides').addClass('hide');
       //console.log($('.mySlides').length);
     })
     slideIndex++;
-    if (slideIndex > $('.mySlides').length-1) {
+    if (slideIndex > $('.mySlides').length - 1) {
       slideIndex = 0;
     }
-  $('.mySlides').eq(slideIndex).removeClass('hide');
-  //console.log(slideIndex);
+    $('.mySlides').eq(slideIndex).removeClass('hide');
+    //console.log(slideIndex);
   }
   setInterval(showSlides, 10000);
 })
