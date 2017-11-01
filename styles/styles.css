@@ -20,10 +20,37 @@ table{
   margin-bottom: 10px;
 }
 
+td{
+  padding:4px;
+}
+tr{
+  border-bottom: solid;
+  border-color: lightgray;
+  border-width: .25px;
+}
+
+tr: last-of-type{
+  border-bottom: none;
+}
+
 button{
   background-color: snow;
       /*transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
 }
+
+hr{
+  margin-top: -4px;
+}
+
+label{
+  margin-right: 2px;
+}
+
+.remove{
+border-radius: 50%;
+padding: 3px;
+}
+
 .ordered{
   font-family: 'Courgette', cursive;
   text-align: left;
@@ -51,19 +78,6 @@ button{
 .footer{
   background-color: darkred;
   grid-area: footer;
-}
-
-td{
-  padding:4px;
-}
-tr{
-  border-bottom: solid;
-  border-color: lightgray;
-  border-width: .25px;
-}
-
-tr: last-of-type{
-  border-bottom: none;
 }
 
 .sider{
@@ -101,10 +115,6 @@ tr: last-of-type{
   "footer footer footer footer footer footer";
 }
 
-h4{
-  display: inline;
-}
-
 .quoteName{
   text-align: right;
 }
@@ -135,14 +145,6 @@ h4{
   outline: none;
   border: lightgray;
   background-color: white;
-}
-
-hr{
-  margin-top: -4px;
-}
-
-label{
-  margin-right: 2px;
 }
 
 .highlight {
