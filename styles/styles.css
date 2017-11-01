@@ -208,4 +208,14 @@ center {
     grid-template-columns: auto;
     grid-template-areas: "header" "sider" "main" "leftImage" "footer"
   }
+  .text-muted {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+  }
+  .modLabel {
+    display: none;
+  }
+  button{
+    font-size: small;
+  }
 }
