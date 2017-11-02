@@ -96,6 +96,7 @@ center {
   grid-area: main;
   background: url("../paper.jpg");
   padding: 17px;
+  border-radius: 4px;
 }
 
 .header {

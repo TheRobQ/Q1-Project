@@ -11,9 +11,12 @@ $(document).ready(function() {
 
   $('#addCharacter').click(function(event) {
     event.preventDefault();
+    if($(window).width() < 700){
+      $('#buttonRow').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
+        '<td><input type="text" value="" name="charName" class="characterName" size="18" required></td>' + '<td><input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
+    }else{
     $('#buttonRow').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
-      '<td><input type="text" value="" name="charName" class="characterName" size="18" required></td>' + '<td><labelclass="modLabel">&nbsp;&nbsp;Modifier</label> <input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
-
+      '<td><input type="text" value="" name="charName" class="characterName" size="18" required></td>' + '<td><labelclass="modLabel">&nbsp;&nbsp;Modifier</label> <input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')}
   })
 
   $('#axCharacter').click(function(event) {
@@ -107,6 +110,8 @@ $(document).ready(function() {
   })
 
   $('#clear').click(function(event) {
+    player =[];
+    modifier = [];
     localStorage.clear();
   })
 
