@@ -273,4 +273,7 @@ background-color: lightgray;
   button{
     font-size: small;
   }
+  body{
+    padding: 0;
+  }
 }
