@@ -12,8 +12,7 @@ $(document).ready(function() {
   $('#addCharacter').click(function(event) {
     event.preventDefault();
     $('#buttonRow').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
-      '<td><input type="text" value="" name="charName" class="characterName" size="18" required>' + '<label class="modLabel">Modifier</label></td>' +
-      '<td><input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
+      '<td><input type="text" value="" name="charName" class="characterName" size="18" required></td>' + '<td><labelclass="modLabel">&nbsp;&nbsp;Modifier</label> <input type="text" class="modifier" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
 
   })
 
@@ -92,9 +91,8 @@ $(document).ready(function() {
       myMods.push(localStorage.getItem("modifier" + [i]));
     }
     for (let j = 0; j < myDudes.length; j++) {
-      $('.inputRow:first').before('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
-        '<td><input type="text" value="" name="charName" class="characterName1" size="18" required>' + '<label class="modLabel">Modifier</label></td>' +
-        '<td><input type="text" class="modifier1" value="" maxlength="3" size="3" required pattern="[1-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
+      $('.holder').after('<tr class="inputRow"><td><label>Player/Foe </label></td>' +
+        '<td><input type="text" value="" name="charName" class="characterName1" size="18" required> </td>' + '<td><label class="modLabel">Modifier</label> <input type="text" class="modifier1" value="" maxlength="3" size="3" required pattern="[0-9]" name="initModifier" oninvalid="this.setCustomValidity("test")" oninput="setCustomValidity("")"></td></tr>')
     }
     $('.characterName1').each(function(i) {
       $(this).val(myDudes[i])
@@ -110,6 +108,11 @@ $(document).ready(function() {
 
   $('#clear').click(function(event) {
     localStorage.clear();
+  })
+
+  $('#axAll').click(function(){
+    event.preventDefault();
+    $('.inputRow').remove();
   })
 
   var slideIndex = 0;

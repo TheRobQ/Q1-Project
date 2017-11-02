@@ -22,71 +22,77 @@
 
     <div class="sider">
       <h1></h1>
+
       <table>
-        <form id="form1">
-          <tr class="inputRow">
-            <td>
-              <label>Player/Foe</label>
-            </td>
-            <td>
-              <input type="text" value="" class="characterName" name="characterName" size="18" required>
-              <label class="modLabel"> Modifier</label>
-            </td>
-            <td>
-              <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[1-9]" oninvalid="this.setCustomValidity('Make sure to enter ony numbers')" oninput="setCustomValidity('')"> </td>
-          </tr>
+        <tbody>
+          <form id="form1">
+            <tr class="holder">
+            </tr>
+            <tr class="inputRow">
+              <td>
+                <label>Player/Foe</label>
+              </td>
+              <td>
+                <input type="text" value="" class="characterName" name="characterName" size="18" required>
+              </td>
+              <td>
+                <label class="modLabel"> Modifier</label>
+                <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[0-9]" oninvalid="this.setCustomValidity('Make sure to enter ony numbers')" oninput="setCustomValidity('')"> </td>
+            </tr>
 
-          <tr class="inputRow">
-            <td>
-              <label>Player/Foe</label></td>
-            <td>
-              <input type="text" value="" class="characterName" name="characterName" size="18" required>
-              <label class="modLabel"> Modifier</label></td>
-            <td>
-              <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[1-9]" oninvalid="this.setCustomValidity('Make sure to enter only numbers')" oninput="setCustomValidity('')"> </td>
-          </tr>
+            <tr class="inputRow">
+              <td>
+                <label>Player/Foe</label></td>
+              <td>
+                <input type="text" value="" class="characterName" name="characterName" size="18" required>
+              </td>
+              <td>
+                <label class="modLabel"> Modifier</label>
 
-          <tr class="inputRow">
-            <td>
-              <label> Player/Foe</label></td>
-            <td>
-              <input type="text" value="" class="characterName" name="characterName" size="18" required>
-              <label class="modLabel"> Modifier</label>
-            </td>
-            <td>
-              <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[1-9]" oninvalid="this.setCustomValidity('Make sure to enter ony numbers')" oninput="setCustomValidity('')"></td>
-          </tr>
-          </tr>
-          <tr id="buttonRow">
-            <td>
-              <button id="addCharacter" form="form1">Add to melee</button>
-            </td>
-            <td>
-              <button id="axCharacter" form="form1">Remove</button>
-            </td>
-            <td>
-              &nbsp;
-            </td>
-          </tr>
-          <tr>
-            <td>
-              &nbsp;
-            </td>
-            <td>
-              <button type="submit" form="form1" value="Submit" id="roll">Roll the Dice</button>
-            </td>
-            <td>
-              &nbsp;
-            </td>
-          </tr>
-        </form>
+                <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[0-9]" oninvalid="this.setCustomValidity('Make sure to enter only numbers')" oninput="setCustomValidity('')"> </td>
+            </tr>
+
+            <tr class="inputRow">
+              <td>
+                <label> Player/Foe</label></td>
+              <td>
+                <input type="text" value="" class="characterName" name="characterName" size="18" required></td>
+              <td>
+                <label class="modLabel"> Modifier</label>
+                <input type="text" class="modifier" name="modifier" maxlength="3" size="3" required pattern="[0-9]" oninvalid="this.setCustomValidity('Make sure to enter ony numbers')" oninput="setCustomValidity('')"></td>
+            </tr>
+            <tr id="buttonRow">
+              <td>
+                <button id="addCharacter" form="form1" class="myBtn">Add</button>
+              </td>
+              <td class="center">
+                <button id="axCharacter" form="form1" class="myBtn"> Remove last </button>
+              </td>
+              <td class="center">
+                <button id="axAll" form="form1" class="myBtn">Remove All</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+              <td class="center">
+                <button type="submit" form="form1" value="Submit" id="roll">Roll the Dice</button>
+              </td>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+          </form>
+        </tbody>
       </table>
 
-
-      <p class="btn btn-primary" id="save" form="form1">Save party</p>
-      <p class="btn btn-primary" id="load" form="form1">Load party</p>
-      <p class="btn btn-primary" id="clear" form="form1">Clear party</p>
-      <br />
+      <div class="functionality">
+        <p class="btn btn-primary" id="save" form="form1">Save party</p>
+        <p class="btn btn-primary" id="load" form="form1">Load party</p>
+        <p class="btn btn-primary" id="clear" form="form1">Clear party</p>
+        <br />
+      </div>
     </div>
 
     <div class="main">
