@@ -62,10 +62,13 @@ center {
   border-radius: 50%;
   padding-left: 3px;
   padding-right: 3px;
+  padding-top: 8px;
   text-align: center;
   border: none;
   margin-bottom: 5px;
-  background-color: rgba(161,28,62,0.4);
+  /*background-color: rgba(161,28,62,0.4);*/
+  background: url('../img/skull-crossbones.png');
+  background-size: 25px 25px;
 }
 
 .remove:hover {

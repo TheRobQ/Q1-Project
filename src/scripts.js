@@ -49,7 +49,7 @@ $(document).ready(function() {
       return a.inVal - b.inVal;
     }).reverse();
     for (let j = 0; j < totals.length; j++) {
-      $('.quoteName').append("<p class='ordered'>" + totals[j]["name"] + " " + totals[j]["inVal"] + " " + "&nbsp; <button class='remove'><center>x</center></button>" + "</p>")
+      $('.quoteName').append("<p class='ordered'>" + totals[j]["name"] + " " + totals[j]["inVal"] + " " + "&nbsp; <button class='remove'></button>" + "</p>")
       $(".remove").click(function(event) {
         $(this).closest("p").remove(".ordered")
       })
