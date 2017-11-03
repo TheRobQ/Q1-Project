@@ -55,18 +55,15 @@ center {
 }
 
 .remove {
-  line-height: 25px;
+  position: relative;
+  top: 3px;
   width: 25px;
   height: 25px;
   display: inline-block;
   border-radius: 50%;
   padding-left: 3px;
   padding-right: 3px;
-  padding-top: 8px;
-  text-align: center;
   border: none;
-  margin-bottom: 5px;
-  /*background-color: rgba(161,28,62,0.4);*/
   background: url('../img/skull-crossbones.png');
   background-size: 25px 25px;
 }
@@ -79,9 +76,11 @@ center {
 .ordered {
   background-color: none;
   font-family: 'Courgette', cursive;
+  font-size: medium;
   text-align: left;
   padding-left: 10px;
   padding-top: 4px;
+  padding-bottom: 6px;
   line-height: 20px;
 }
 
